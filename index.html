@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+
+</head>
+<body>
+    <header>
+        <div>
+                <h1>Jonas.</h1>
+        </div> 
+        <nav class="nav-header">
+            <li><a href="#">Apie</a></li>
+            <li><a href="#">Projektai</a></li>
+            <li><a href="#">Kontaktai</a></li>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="main-content">
+            <h2>Labas, Aš <span>Jonas</span></h2>
+            <p>Esu Programuotojas</p>
+        </div>
+        <div class="about-content">
+            <section class="about">
+                <h3>Apie mane</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="nav-about">
+                <p class="tab-links active-link" onclick="opentab('skills')">Igūdžiai</p>
+                <p class="tab-links" onclick="opentab('experience')">Patirtis</p>
+                <p class="tab-links" onclick="opentab('education')">Išsilavinimas</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX dizainas</span><br>Web/App dizainas</li>
+                        <li><span>Programavimas</span><br>JavaScript, Python, Java</li>
+                        <li><span>Duomenų bazės</span><br>MySQL, MongoDB</li>
+                    </ul>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <li><span>2022-2023</span><br>Logistikos Profesija</li>
+                        <li><span>2023-Present</span><br>Studentas IUBH kompiuteriu mokslas</li>
+                        <li><span>2022</span><br>Vidurinis issilavinimas</li>
+                    </ul>
+                </div>
+                <div class="tab-contents active-tab" id="experience">
+                    <ul>
+                        <li><span>2022-2024</span><br>Statybu sektorius</li>
+                        <li><span>2024-2025</span><br>Padangu montuotojas</li>
+                        <li><span>2025-Present</span><br>Kurjeris</li>
+                    </ul>
+                </div>
+
+                </div>
+            </section>
+
+            
+        </div>
+        <div class="projects-content">
+            <section class="projects">
+                <h3>Mano projektai</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor </p>
+                <div class="project-list">
+                    <div class="project-item">
+                        <h4>Projektas 1</h4>
+                        <p>Trumpas projekto aprašymas.</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Projektas 2</h4>
+                        <p>Trumpas projekto aprašymas.</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Projektas 3</h4>
+                        <p>Trumpas projekto aprašymas.</p>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+        <div class="kontaktai">
+            <section class="contact-form">
+                <h3>Kontaktai</h3>
+                <p>Jei turite klausimų ar norite susisiekti, galite naudoti šią formą:</p>
+                <form>
+                    <div class="form-left">
+
+                        <input placeholder="Vardas" type="text" id="name" name="name" required>
+                        <input placeholder="El. paštas" type="email" id="email" name="email" required>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/profile.php?id=100010578887729&locale=lt_LT" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                              <a href="https://www.instagram.com/seipjons" target="_blank"><i class="fab fa-instagram"></i></a>
+                              <a href="mailto:pransjonas@gmail.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="form-right">
+                        <textarea placeholder="Jūsų žinutė" id="message" name="message" rows="6" cols="40"></textarea>
+                    </div>
+                </form>
+            </section>
+        </div>
+        
+    </div>
+    <footer>
+        
+    </footer>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-tab");
+            }
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-tab");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+    </script>
+</body>
+</html>
